@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
+	img "github.com/veandco/go-sdl2/img"
 	"github.com/veandco/go-sdl2/sdl"
-	img "github.com/veandco/go-sdl2/sdl_image"
 )
 
 type pipes struct {
@@ -117,7 +117,7 @@ type pipe struct {
 func newPipe() *pipe {
 	return &pipe{
 		x:        800,
-		h:        100 + int32(rand.Intn(300)),
+		h:        100 + int32(rand.Intn(100)),
 		w:        50,
 		inverted: rand.Float32() > 0.5,
 	}
